@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weltall</title>
+
+    <style>
+        canvas {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+
+    <script>
+        let KEY_SPACE = false; // 32
+        let KEY_UP = false; // 38
+        let KEY_DOWN = false; // 40  
+        let canvas = document.getElementById('cancas');
+        let ctx = canvas.getContext('2d');
+
+        let rocket = {
+            x: 100,
+            y: 200,
+            width: 200,
+            heigth: 80,
+            src: 'img/rocket.png'
+        };
+
+        let ufo = {
+            x: 500,
+            y: 200,
+            width: 100,
+            heigth: 40,
+            src: 'img/ufo .png'
+        };
+
+
+        document.onkeydown = function(e) {
+                if (e.keyCode == 32) { //Leertste gedrückt 
+                    KEY_SPACE = true;
+                }
+                document.onkeydown = function(e) {
+                        if (e.keyCode == 38) { //Leertste gedrückt 
+                            KEY_SPACE = true;
+                        }
+                        document.onkeydown = function(e) {
+                            if (e.keyCode == 40) { //Leertste gedrückt 
+                                KEY_SPACE = true;
+                            }
+
+
+                        }
+
+                        document.onkeyup = function(e) {
+                            if (e.keyCode == 32) { //Leertste losgelassen
+                                KEY_SPACE = false;
+
+                            }
+
+                            if (e.keyCode == 38) { //Leertste losgelassen
+                                KEY_UP = false;
+                            }
+                            if (e.keyCode == 40) { //Leertste losgelassen
+                                KEY_DOWN = false;
+                            }
+                        }
+
+                        funktion startGame() {
+
+                            draw() //calulate
+                        }
+
+                        funktion loadImages() {
+
+                        }
+
+
+                        function draw() {
+                            requestAnimationFrame(draw);
+                        }
+    </script>
+
+
+
+
+</head>
+
+
+<body onload="startGame()">
+    <canvas id="canvas" widt="720" height="480"></canvas>
+
+</body>
+
+</html>
